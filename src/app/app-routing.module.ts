@@ -34,6 +34,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./paginas/mapa/mapa.module').then((m) => m.MapaPageModule),
   },
+  {
+    path: 'camara',
+    loadChildren: () =>
+      import('./paginas/camara/camara.module').then((m) => m.CamaraPageModule),
+  },
 ];
 
 @NgModule({
