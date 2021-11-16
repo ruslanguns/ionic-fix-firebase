@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- hacemos que aparezca el botón en la parte superior izquierda-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-content"></ion-menu-button>
+    </ion-buttons>
+    <!---->
+    <ion-title>Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Aquí insertamos el código de los componentes -->
+  <!-- Componenten Item e Input-->
+  <form novalidate>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input placeholder="Introduce tu nombre" type="text"></ion-input>
+    </ion-item>
+    <!-- de tipo texto-->
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input placeholder="Introduce tus apellidos" type="text"></ion-input>
+    </ion-item>
+    <!-- de tipo múmero-->
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input placeholder="Introduce tu edad" type="number" min="18" max="65"></ion-input>
+    </ion-item>
+    <!-- de tipo fecha-->
+    <ion-item>
+      <ion-label position="floating">Fecha de incorporación al centro</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+    <!-- de tipo List-->
+    <ion-list>
+      <ion-radio-group [(ngModel)]="sexo" name="sexo">
+        <ion-list-header>
+          <ion-label>Sexo</ion-label>
+        </ion-list-header>
+        <!---->
+        <ion-item>
+          <ion-label>Hombre</ion-label>
+          <ion-radio slot="start" value="hombre"></ion-radio>
+        </ion-item>
+        <!---->
+        <ion-item>
+          <ion-label>Mujer</ion-label>
+          <ion-radio slot="start" value="mujer"></ion-radio>
+        </ion-item>
+        <!---->
+        <ion-item>
+          <ion-label>No contesta</ion-label>
+          <ion-radio slot="start" value="nocontesta"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+      <ion-button (click)="presentAlert()" class="css_boton" expand="block" fill="clear" shape="round">
+        Enviar
+      </ion-button>
+    </ion-list>
+  </form>
+
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- hacemos que aparezca el botón en la parte superior izquierda-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-content"></ion-menu-button>
+    </ion-buttons>
+    <!---->
+    <ion-title>lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- insertamos el ngFor para recorrer los datos de la BD que tenemos escrito en .ts-->
+  <ion-list>
+    <ion-item *ngFor="let item of datos" color="warning">
+      <ion-label>
+        <h1>{{item.apellidos}}, {{item.nombre}}</h1>
+        <p>{{item.edad}} <strong>años</strong>, {{item.sexo}}</p>
+        <p> <strong>Fecha de matriculación</strong> {{item.fecha}}</p>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

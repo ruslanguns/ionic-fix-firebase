@@ -1,0 +1,37 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar color="primary">
+    <!-- hacemos que aparezca el botón en la parte superior izquierda-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-content"></ion-menu-button>
+    </ion-buttons>
+    <!---->
+    <ion-title>Mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Aquí insertamos el código de los componentes -->
+  <!-- Componenten tabs-->
+  <div id="mapId" style="width: 100%; height: 94%"> <!-- Visualizamos en mapa en pantalla -->
+  </div>
+  <!-- Visualizamos las opciones de tab (pie de página) -->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="cambiarRuta('instituto')">
+        <ion-icon name="triangle"></ion-icon>
+        <ion-label>Ruta Instituto</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="cambiarRuta('hermano')">
+        <ion-icon name="ellipse"></ion-icon>
+        <ion-label>Ruta hermano casa </ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="cambiarRuta('oficina')">
+        <ion-icon name="square"></ion-icon>
+        <ion-label>Ruta Oficina</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>
