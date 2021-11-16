@@ -11,4 +11,13 @@
 
 <ion-content>
 
+  <ion-button (click)="tomarFoto()" color="primary">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Tomar foto
+  </ion-button>
+
+  <ng-container *ngIf="imageUrl">
+    <ion-img [src]="imageUrl"></ion-img>
+  </ng-container>
+
 </ion-content>
