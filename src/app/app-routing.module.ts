@@ -39,6 +39,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./paginas/camara/camara.module').then((m) => m.CamaraPageModule),
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./paginas/fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'refresher',
+    loadChildren: () => import('./paginas/refresher/refresher.module').then( m => m.RefresherPageModule)
+  },
 ];
 
 @NgModule({
