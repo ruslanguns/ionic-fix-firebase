@@ -1,10 +1,18 @@
 <ion-header>
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+     <ion-menu-button menu="menu-content"></ion-menu-button>
+   </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text="Atrás"
+        color="primary">
+      </ion-back-button>
+    </ion-buttons>
  <!-- hacemos que aparezca el botón en la parte superior izquierda-->
- <ion-buttons slot="start">
-  <ion-menu-button menu="menu-content"></ion-menu-button>
-</ion-buttons>
-<!---->
     <ion-title>refresher</ion-title>
   </ion-toolbar>
 </ion-header>
