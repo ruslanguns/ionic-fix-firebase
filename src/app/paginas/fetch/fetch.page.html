@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- hacemos que aparezca el botón en la parte superior izquierda-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-content"></ion-menu-button>
+    </ion-buttons>
+    <!---->
+    <ion-title>Fetch</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="getJoke($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>– Chuck Norris</ion-card-subtitle>
+      <ion-card-title>Random Joke</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p *ngIf="joke">{{ joke }}</p>
+      <p *ngIf="!joke">Refresca para obtener una broma</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'refresher',
     loadChildren: () => import('./paginas/refresher/refresher.module').then( m => m.RefresherPageModule)
   },
+  {
+    path: 'fetch',
+    loadChildren: () => import('./paginas/fetch/fetch.module').then( m => m.FetchPageModule)
+  },
 ];
 
 @NgModule({
