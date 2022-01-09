@@ -41,15 +41,25 @@ const routes: Routes = [
   },
   {
     path: 'fab',
-    loadChildren: () => import('./paginas/fab/fab.module').then( m => m.FabPageModule)
+    loadChildren: () =>
+      import('./paginas/fab/fab.module').then((m) => m.FabPageModule),
   },
   {
     path: 'refresher',
-    loadChildren: () => import('./paginas/refresher/refresher.module').then( m => m.RefresherPageModule)
+    loadChildren: () =>
+      import('./paginas/refresher/refresher.module').then(
+        (m) => m.RefresherPageModule
+      ),
   },
   {
     path: 'fetch',
-    loadChildren: () => import('./paginas/fetch/fetch.module').then( m => m.FetchPageModule)
+    loadChildren: () =>
+      import('./paginas/fetch/fetch.module').then((m) => m.FetchPageModule),
+  },
+  {
+    path: 'tarea',
+    loadChildren: () =>
+      import('./paginas/tarea/tarea.module').then((m) => m.TareaPageModule),
   },
 ];
 
