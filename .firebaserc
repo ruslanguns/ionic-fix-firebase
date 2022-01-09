@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionic-final-curso": {
+      "hosting": {
+        "app": [
+          "ionic-final-curso"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionic-final-curso"
+  }
+}
